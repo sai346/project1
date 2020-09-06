@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+      input[type=text],[type=password]{
+        border:none;
+        outline:none;
+        border-bottom:5px solid orange;
+       
+      }
+        form{
+            margin:80px;
+        }
+        form > div {
+  position:relative;
+}
+form > div > label {
+  position: absolute;
+  margin:8px;
+}
+form.go-bottom label {
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.2s;
+  transform:translate(-12px, -12px) scale(.8);
+}
+form.go-bottom input:focus + label{
+  top: 100%;
+  margin-top: -40px;
+}
+.n{
+  margin-top:10px;
+}
+    </style>
+   
+</head>
+<body>
+  <ul>
+    <li><a href="list.html">Home</a></li>
+    <li><a href="aboutus.html">AboutUs</a></li>
+    <li><a href="">Gallery</a></li>
+    <li><a href="">ContactUs</a></li>
+
+</ul>
+  <h3>ContactUs</h3>
+    <form class="go-bottom">
+    <div>
+        <!-- <label for="name">your Name</label> -->
+
+        <input id="name" name="name" type="text" repuired>
+        <label for="name">first Name</label>
+       
+      </div>
+      <div style="margin-top:50px">
+        <input id="name" name="name" type="password" repuired>
+        <label class="n" for="name">Last Name</label>
+      </div>
+<div style="margin:8px">
+  <input type="submit" value="Login">
+
+</div>
+    
+    </form>
+</body>
+</html>
